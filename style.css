@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Quicksand:400,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 50px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color2);
+    display:flex;
+    justify-content: center;
+}
+body > div {
+    width: 1200px;
+}
+.elegant {
+    font-family: 'Oxygen', sans-serif;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    /*width: 100px;
+height: 100px;
+object-fit: cover; */
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+/* HEADER */
+
+header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo>* {
+    margin-right: 10px;
+}
+
+header .links {
+    display: flex;
+}
+
+header .links>* {
+    margin-left: 20px;
+}
+
+header .links>*:first-child {
+    margin: 0;
+}
+
+:root {
+    --accent: orange;
+    --color2: #333;
+
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card {
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.1s;
+}
+
+.card .image {
+    filter: brightness(80%) grayscale(100%);
+    object-fit: cover;
+    transition: all 0.1s;
+}
+
+.image:hover {
+    filter: brightness(90%);
+}
+
+.card .text {
+    flex: 1;
+    margin: 0;
+    padding: 15px;
+    background: var(--accent);
+    color: white;
+}
+
+/* FOOTER */
+
+footer {
+
+    height: 100px;
+    margin-top: 25px;
+}
+
+footer a {
+    color: var(--color2);
+}
+
+.content {
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 25px;
+}
+.content .image {
+    flex:1;
+    object-fit: cover;
+}
+
+.content .text {
+    flex:1;
+}
